@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/css/contact.css">
+    <link rel="shortcut icon" href="./assets/images/BVC-Logo-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <title>Bonny Vocational Centre - Contact Page</title>
+</head>
+
+<body>
+
+    <!-- Navigation Section | Universal Section -->
+    <nav class="nav transparent">
+        <section class="nav__outer-container">
+            <section class="nav__logo-section">
+                <div class="nav__logo-container">
+                    <a href="/">
+                        <img src="./assets/images/BVC-Logo-1.png" alt="Bonny Vocational Center's Logo"
+                            class="nav__logo">
+                    </a>
+                </div>
+            </section>
+            <div class="nav__container">
+                <section class="nav__link-container">
+                    <label class="link"><a href="/">Home</a></label>
+                    <label class="dropdown__container">
+                        <label class="dropdown__link link"><a href="#">About Us <i
+                                    class="fa fa-angle-down"></i></a></label>
+                        <section class="aboutus__dropdown dropdown__list dropdown">
+                            <label><a href="about.html">Who We Are</a></label>
+                            <!-- <label><a href="#about.html#centreTour">Centre Tour</a></label> -->
+                            <!-- <label><a href="#">School Calender</a></label> -->
+                            <label><a href="/management_team.html">Management Team</a></label>
+                            <label><a href="./acceleration.html">Accreditation​</a></label>
+                        </section>
+                    </label>
+                    <label class="course__label dropdown__container">
+                        <label class="dropdown__link link"><a href="#">Courses <i
+                                    class="fa fa-angle-down"></i></a></label>
+                        <section class="course dropdown__list  dropdown">
+                            <div>
+                            <section class="course__card">
+                                <h2>Technical & Vocational-Related Qualifications</h2>
+                                <div class="course__image-container">
+                                    <img src="./assets/images/slides/girl.jpg" alt="" class="course__image">
+                                </div>
+                                <div class="link__container">
+                                    <label> <a href="#">Building Construction</a></label>
+                                    <label> <a href="#">Business Support</a></label>
+                                    <label> <a href="#">Catering and Hospitality</a></label>
+                                    <label> <a href="#">Electrical Installation</a></label>
+                                    <label> <a href="#">IT Support System</a></label>
+                                    <label> <a href="#">Mechanical Plant Maintenance</a></label>
+                                    <label> <a href="#">Refreigeration and Air-Conditioning</a></label>
+                                </div>
+                            </section>
+                            <section class="course__card">
+                                <h2>Professional & Short Courses</h2>
+                                <div class="course__image-container ">
+                                    <img src="./assets/images/slides/girl-writing.jpg" alt="" class="course__image">
+                                </div>
+                                <div class="link__container">
+                                    <label> <a href="#">Enterprise and Entrepreneurship</a></label>
+                                    <label> <a href="#">Food Safety in Catering</a></label>
+                                    <label> <a href="#">Forklift Operation</a></label>
+                                    <label> <a href="#">Fundamentals of Pipefitting</a></label>
+                                    <label> <a href="#">Health and Safety</a></label>
+                                    <label> <a href="#">Instrumentation and Process Automation</a></label>
+                                    <label> <a href="#">Leadership and Team Skills</a></label>
+                                    <label> <a href="#">School Business Management</a></label>
+                                    <label> <a href="#">Skill Proficiency Certificates</a></label>
+                                    <label> <a href="#">Teaching, Training and Assessiong Learning</a></label>
+                                </div>
+                            </section>
+                            </div>
+                        </section>
+                    </label>
+                    <label class="dropdown__container">
+                        <label class="dropdown__link link"><a href="#">Adminssions <i
+                                    class="fa fa-angle-down"></i></a></label>
+                        <section class="administration__dropdown dropdown__list  dropdown">
+                            <label><a href="#"> Technical & Vocational-Related Qualifications</a></label>
+                            <label><a href="#">Professional & Short Courses</a></label>
+                        </section>
+                    </label>
+                    <label class="link"> <a href="faq.html">FAQ</a></label>
+                    <label class="link" id="visit"> <a href="contact.html">Contact Us</a></label>
+                </section>
+                <section class="nav__icon-container">
+                    <div class="nav__menu hide">
+                        <div class="nav__icon"></div>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </nav>
+
+
+    <a href="#" class="up__button show"><i class="fa fa-angle-up"></i></a>
+
+    <div class="backgroundSlider"></div>
+
+    <main>
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <section class="message">
+            <div class="message__container">
+                <div class="message__map" id="map"></div>
+                <div class="message__form">
+                    <form class="form">
+                        <div class="form__user-details">
+                            <div>
+                                <label for="fullname">Full Name *</label>
+                                <input type="text" id="fullname" placeholder="Full Name">
+                            </div>
+                            <div>
+                                <label for="email">Email Address *</label>
+                                <input type="text" id="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <!-- TODO remove the display:non; to show Subject input -->
+                        <!-- <div class="form__subject">
+                            <label for="subject">Subject *</label>
+                            <input type="text" placeholder="Subject" id="subject">
+                        </div> -->
+                        <div class="form__meg">
+                            <label for="message">Mesasge *</label>
+                            <textarea name="" id="Message" placeholder="Type Message"></textarea>
+                        </div>
+                        <div class="form__button-container">
+                            <button>Submit Message <i class="fa fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="details">
+            <div class="details__container">
+                <div class="details__location">
+                    <div>
+                        <i class="fa fa-location"></i>
+                        <div class="details__text">
+                            <h1>Akiama-Oguede Road</h1>
+                            <p>Bonny Island, Rivers State</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__contact-info">
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <div class="details__text">
+                            <h1>+234-8139700651</h1>
+                            <p>Contact Number</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details__opening-hours">
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="details__text">
+                            <h1>Mon - Fri: 8:00 - 5:00</h1>
+                            <p>Operating Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Letter Section -->
+        <section class="newsletter">
+            <div class="newsletter__text">
+                <h1>JOIN OUR NEWSLETTER</h1>
+                <!-- <p>Enter your email address to get updates from us as regards school activities and admissions</p> -->
+            </div>
+            <form action="" class="newsletter__form">
+                <input type="email" name="email" id="email" placeholder="Please Insert Your Email Address">
+                <button>Join Newsletter</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer Section : Universal Section -->
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__bvc footer__section">
+                <div class="content">
+                    <h1>BVC Bonny</h1>
+                    <div class="footer__link">
+                        <label><a href="#">Background</a></label>
+                        <label><a href="#">Vision</a></label>
+                        <label><a href="#">Mission</a></label>
+                        <label><a href="#">Strategic Goals</a></label>
+                        <label><a href="#">Core Values</a></label>
+                        <label><a href="#">Management Team</a></label>
+                        <label><a href="#">Centre Tour</a></label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer__vocational-info">
+                <div class="content">
+                    <h1>Technical & Vocational-Related Qualifications​</h1>
+                    <div class="footer__link">
+                        <label><a href="#">Building Construction</a></label>
+                        <label><a href="#">Business Support</a></label>
+                        <label><a href="#">Electrical Installation</a></label>
+                        <label><a href="#">Fabrication and Welding</a></label>
+                        <label><a href="#">Core Values</a></label>
+                        <label><a href="#">Management Team</a></label>
+                        <label><a href="#">Centre Tour</a></label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer__courses">
+                <div class="content">
+                    <h1>Professional & Short Courses</h1>
+                    <div class="footer__link">
+                        <label><a href="#">Enterprise and Entrepreneureship</a></label>
+                        <label><a href="#">Food Safety in Catering</a></label>
+                        <label><a href="#">Forklift Operation</a></label>
+                        <label><a href="#">Health and Safety</a></label>
+                        <label><a href="#">Instrumentation and Process</a></label>
+                        <label><a href="#">Leadership and Team Skills</a></label>
+                        <label><a href="#">Skills Proficiency Certificates</a></label>
+                        <label><a href="#">School Business Management</a></label>
+                        <label><a href="#">Teaching, Training and Assessing Learning</a></label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer__socialmedia">
+                <div class="content">
+                    <h1>Follow Us</h1>
+                    <div class="footer__link">
+                        <label> <a href="https://www.facebook.com/BVCBonny/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></label>
+                        <label> <a href="https://twitter.com/BonnyCentre" target="_blank"><i class="fa-brands fa-twitter-square"></i></a></label>
+                        <label> <a href="https://youtu.be/sdrltsueq80" target="_blank"><i class="fa-brands fa-youtube"></i></a></label>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts/main.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> -->
+    <script src="assets/scripts/map.js"></script>
+</body>
+
+</html>
